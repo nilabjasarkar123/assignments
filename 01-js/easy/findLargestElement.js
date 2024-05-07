@@ -3,10 +3,17 @@
   Example:
   - Input: [3, 7, 2, 9, 1]
   - Output: 9
+npx jest .\findLargestElement.test.js
 */
 
 function findLargestElement(numbers) {
-    
+  let maxnum = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > maxnum) {
+      maxnum = numbers[i];
+    }
+  }
+  return maxnum;
 }
 
 module.exports = findLargestElement;
